@@ -125,11 +125,54 @@
     
       <h5>Soda</h5>
       <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-    </div>  
-    <img src="https://www.w3schools.com/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+    </div> 
   </div>
 </div>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add some basic styling to the images */
+    img {
+      width: 100%; /* Make sure the images take up the full width of their container */
+      height: auto; /* Maintain the aspect ratio of the images */
+      display: block; /* Remove any default inline styling */
+    }
+
+    /* Create a container to hold the images and make it a flex container */
+    .image-container {
+      display: flex;
+      justify-content: space-between; /* Distribute the space between the images */
+      margin: 10px; /* Add some margin for spacing */
+    }
+  </style>
+  <title>Three Images Side by Side</title>
+</head>
+<body>
+
+  <!-- Create a container div for the images -->
+  <div class="image-container">
+    <!-- Image 1 -->
+    <div>
+      <img src="docs/assets/GH1.png" alt="Image 1">
+    </div>
+
+    <!-- Image 2 -->
+    <div>
+      <img src="docs/assets/Screenshot_20231218-094626~2.png" alt="Image 2">
+    </div>
+
+    <!-- Image 3 -->
+    <div>
+      <img src="docs/assets/Screenshot_20231218-094701~3.png" alt="Image 3">
+    </div>
+  </div>
+
+</body>
+</html>  
 <!-- Contact/Area Container -->
 <div class="w3-container" id="book" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
