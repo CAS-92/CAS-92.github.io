@@ -1,9 +1,236 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>The Inkwell</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <style>
+    body, html {
+      height: 100%;
+      font-family: "Lora", serif;
+    }
+
+/* Override w3.css styles for headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lora", serif !important;
+    }  
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("docs/assets/DSCF0440.jpg");
+      min-height: 80%;
+    }
+
+    .menu {
+      display: none;
+    }
+    </style>
+  </head>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#book" class="w3-button w3-block w3-black">BOOK</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-sand">Open Wednesday-Saturday from 12pm until 10pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-sand" style="font-size:90px">The<br>Inkwell</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-sand">32 Tabley Street, L1 8DW</span>
+  </div> 
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-black w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <!-- First Image -->
+      <img src="docs/assets/IMG-20231119-WA0000~2.jpg" alt="Image 1" style="width: 48%; margin-right: 2%;">
+
+      <!-- Second Image -->
+      <img src="docs/assets/IMG-20231119-WA0001~2.jpg" alt="Image 2" style="width: 48%; margin-left: 2%;">
+    </div>
+    <p>Dine with us at The Inkwell, where our esteemed chef/owner, William Shuttleworth, has curated an exceptional menu revolving around the richness of seasonal produce. Through his skilled craftsmanship and dedication, he ensures that each dish is a harmonious blend of flavors, textures, and visual appeal. The result is an elevated dining experience that showcases the freshness and quality of locally sourced ingredients, making every visit to our restaurant a celebration of exquisite cuisine and culinary mastery under William's seasoned guidance. </p>
+    <p>Join us for </p>
+  </div>
+</div>
+
+
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:900px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card" style="background-color: gray" >
+      <h5 style="font-weight: bold; font-size: 24px;">To Start</h5>
+      <p class="w3-text-white">Pigs Cheek<span style="float: right; clear: both;">£12.00</span><br> with Celeriac and Apple </p>
+      
+      <p class="w3-text-white">House Cured Trout<span style="float: right; clear: both;">£10.00</span><br>with Pickled Pear, Beetroot and Mayonnaise</p>
+      
+      <p class="w3-text-white">Cheese and Onion Croquettes<span style="float: right; clear: both;">£8.50</span><br> with Black Garlic and Crispy Onions</p>
+
+      <h5 style="font-weight: bold; font-size: 24px;">Mains</h5>
+      <p class="w3-text-white">Onglet Steak<span style="float: right; clear: both;">£27.00</span><br> with Bone Marrow, Turnip and Spinach</p>
+
+      <p class="w3-text-white">Stuffed Guinea Fowl<span style="float: right; clear: both;">£23.00</span><br> with Pearl Onions, Kohlrabi and Kale</p>
+
+      <p class="w3-text-white">Cod Loin<span style="float: right; clear: both;">£26.00</span><br> with Pomme Puree, Vanilla Burre Blanc and "Seaweed"</p>
+
+      <p class="w3-text-white">BBQ Pink Fir Potatoes<span style="float: right; clear: both;">£21.00</span><br> with Mushrooms, Radicchio and Pickled Walnuts</p>
+
+      <h5 style="font-weight: bold; font-size: 24px;">Sides</h5>
+      <p class="w3-text-white">Hand Cut Seasoned Fries<span style="float: right; clear: both;">£4.50
+      <p class="w3-text-white">Savoy Cabbage, Wholegrain Mustard and Pickles<span style="float: right; clear: both;">£5.00
+      <p class="w3-text-white">Maple Glazed Carrots<span style="float: right; clear: both;">£4.50
+
+      <h5 style="font-weight: bold; font-size: 24px;">Dessert</h5>
+      <p class="w3-text-white">Chocolate Mousse<span style="float: right; clear: both;">£8.00</span><br> with Blood Orange Compote and Praline</p>
+
+      <p class="w3-text-white">Sticky Ginger Cake<span style="float: right; clear: both;">£11.00</span><br> with Stilton and Pickled Walnut</p>
+
+      <p class="w3-text-white">Thyme Shortbread<span style="float: right; clear: both;">£9.00</span><br> with Lemon Curd and Roasted White Chocolate</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card" style="background-color: gray">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+    
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+    
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+    
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+    </div> 
+  </div>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Add some basic styling to the images */
+    img {
+      width: 100%; /* Make sure the images take up the full width of their container */
+      height: auto; /* Maintain the aspect ratio of the images */
+      display: block; /* Remove any default inline styling */
+    }
+
+    /* Create a container to hold the images and make it a flex container */
+    .image-container {
+      display: flex;
+      justify-content: space-between; /* Distribute the space between the images */
+      margin: 10px; /* Add some margin for spacing */
+    }
+  </style>
+  <title>Three Images Side by Side</title>
+</head>
+<body>
+
+  <!-- Create a container div for the images -->
+  <div class="image-container">
+    <!-- Image 1 -->
+    <div>
+      <img src="docs/assets/GH1.png" alt="Image 1" style="width: 100%; height: 100%">
+    </div>
+
+    <!-- Image 2 -->
+    <div>
+      <img src="docs/assets/GH3.png" alt="Image 2" style="width: 100%; height: 100%">
+    </div>
+
+    <!-- Image 3 -->
+    <div>
+      <img src="docs/assets/GH2.png" alt="Image 3" style="width: 100%; height: 100%">
+    </div>
+  </div>
+
+</body>
+</html>  
+<!-- Contact/Area Container -->
+<div class="w3-container" id="book" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Book With Us</span></h5>
+    <p></p>
+    <p><span class="w3-tag">Message about booking table numbers and process</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <a href="https://cas-92.github.io/cookies">Cookie Policy</a>
+ </footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
 
 </body>
 </html>
